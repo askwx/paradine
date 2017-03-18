@@ -1,0 +1,233 @@
+/**
+ * Author       : ParadineIns <paradineins@gmail.com>
+ * Template Name: Paradine - Creative Portfolio Bootstrap Template
+ * Version      : 1.0
+ */
+body { color: #666; }
+ul, ol { padding-left: 30px; }
+html, body, header, .intro-bg { height: 100%; line-height: 1.5 }
+.portfolio-item { border: 1px solid #F1F1F1; }
+.progress { height: 4px; position: relative; overflow: visible; margin-bottom: 36px }
+.progress:last-child { margin-bottom: 0; }
+.progress-bar { transition-duration: 2s; }
+.progress span {
+    position: absolute;
+    top: -23px;
+    font-size: 13px;
+    color: #666;
+}
+span.left {
+    left: 0;
+}
+span.right {
+    right: 0;
+}
+img { max-width: 100%; }
+a { outline: none; }
+.spyelement { position: relative; }
+header .navbar-default, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover { background-color: transparent; border-color: transparent; }
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-weight: lighter;
+margin-top: 0;
+}
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>li>a:hover, .introduction, .btn.focus, .btn:focus, .btn:hover { color: white; }
+.navbar-default .navbar-brand { letter-spacing: 4px; }
+.navbar-default .navbar-nav>li>a { letter-spacing: 1px; font-size: 13px; }
+.intro-bg { background-image: url(assets/images/introduction-bg.jpg); }
+.introduction-arrow { position: absolute; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); bottom: 30px; }
+.infinite {
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 1.7s; /* Safari 4.0 - 8.0 */
+    animation-duration: 1.7s;
+}
+.relative, .left-line h2, .center-line>h2, .ins-list>li {
+    position: relative;
+}
+#main-nav-ins.affix, .bg-primary { background-color: #0a6f8b; }
+#main-nav-ins .navbar-brand:focus, #main-nav-ins .navbar-brand:hover {
+    color: white;
+}
+header .introduction {
+    height: 100%;
+    background: rgba(4,122,155,0.85)
+}
+header .parent {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+header .child {
+    display: table-cell;
+    vertical-align: middle;
+}
+.btn-default {
+background-color: #37a7c3;
+color: white;
+border: 0;
+}
+.btn-outline {
+    background-color: transparent;
+}
+.progress-bar, .left-line>*:after, .center-line>*:after, .btn-primary {
+    background-color: #37a7c3;
+    border-color: #37a7c3;
+}
+.bg-light { background-color: #f6f6f6; }
+.full-line>*:before { background-color: #EEE; }
+/* lines */
+.base-line>*:after, .base-line>*:before {
+    bottom: -16px;
+    height: 2px;
+    position: absolute;
+    content: " ";
+}
+.center-line>*:after {
+    left: 50%;
+    margin-left: -26px;
+    text-align: center;
+}
+.left-line>*:after, .full-line>*:after {
+    left: 0;
+}
+.center-line>*:after, .left-line>*:after {
+    width: 50px;
+}
+.full-line>*:before { width: 100%; }
+.text-primary {
+    color: #37a7c3;
+}
+.text-medium {
+    color: #555;
+}
+.btn-primary-outline, .btn-primary-outline:focus, .btn-primary-outline:hover {
+    color: #47bce2;
+    border-color: #47bce2;
+}
+.btn { border-radius: 0; }
+.btn-light {
+    color: #A9A9A9;
+    background-color: #EEE;
+    border-radius: 0;
+}
+.iconset-32 i:before {
+    font-size: 32px;
+}
+.icon-24:before {
+    font-size: 24px;
+}
+.text-24 {
+    font-size: 24px;
+}
+.form-control {
+    border-radius: 0;
+        border-color: #DDD;
+        padding: 12px;
+        height: 46px;
+}
+/**
+ * Flip Effect
+ */
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+
+ /* flip speed goes here */
+ .flipper {
+ 	transition: 0.6s;
+ 	transform-style: preserve-3d;
+ 	position: relative;
+ }
+
+ /* hide back of pane during swap */
+ .front, .back {
+ 	backface-visibility: hidden;
+
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ }
+
+ /* front pane, placed above back */
+ .front {
+ 	z-index: 2;
+ 	/* for firefox 31 */
+ 	transform: rotateY(0deg);
+ }
+
+ /* back, initially hidden pane */
+ .back {
+ 	transform: rotateY(180deg);
+    background-color: #EEE;
+   position: relative;
+   width: 100%;
+   padding-top: 70.15%; /* 16:9 Aspect Ratio */
+ }
+.back>div {
+position:  absolute;
+top: 30%;
+left: 0;
+bottom: 0;
+right: 0;
+text-align: center;
+}
+.text-thin { font-weight: 300; }
+
+/**
+ * Spacing
+ */
+
+ hr { margin-bottom: 10px; margin-top: 10px; }
+ .martop-60 { margin-top: 60px; }
+ .martop-48 { margin-top: 48px; }
+ .martop-24 { margin-top: 24px; }
+ .martop-20 { margin-top: 20px; }
+ .martop-12 { margin-top: 12px; }
+ .martop-4 { margin-top: 4px; }
+ .nomargin { margin: 0; }
+ .marbottom-16, .marset-16 i { margin-bottom: 16px; }
+ .marbottom-24 { margin-bottom: 24px; }
+ .marbottom-32 { margin-bottom: 32px; }
+ .marbottom-48 { margin-bottom: 48px; }
+ .marbottom-60 { margin-bottom: 60px; }
+ .iconspace i { margin-left: 5px; margin-right: 5px; }
+ .padtop-12 { padding-top: 12px; }
+ .padbottom-12 { padding-bottom: 12px; }
+ .padr-8 { padding-right: 8px; }
+ .padl-8 { padding-left: 8px; }
+ .padr-24 { padding-right: 24px; }
+ .padl-24 { padding-left: 24px; }
+ .padtop-60 { padding-top: 60px; }
+ .padbottom-60 { padding-bottom: 60px; }
+ .padbottom-48 { padding-bottom: 48px; }
+ .padbottom-32 { padding-bottom: 32px; }
+ .padtop-20 { padding-top: 20px; }
+ .padtop-24 { padding-top: 24px; }
+ .padtop-32 { padding-top: 32px; }
+ .padbottom-24 { padding-bottom: 24px; }
+
+ /**
+ * Font Sizes
+ */
+
+ .size-16 { font-size: 16px; }
+ .size-18 { font-size: 18px; }
+ .size-20 { font-size: 20px; }
+ .size-24, .iconset-24 i:before { font-size: 24px; }
+ .size-34, .iconset-34 i:before { font-size: 34px; }
+ .size-48 { font-size: 48px; }
+ .size-smaller { font-size: .8em }
+
+ /**
+ * Font Colors
+ */
+
+ .text-white { color: white; }
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover { color: #47bce2; }
