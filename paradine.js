@@ -7,101 +7,107 @@
 (function ($) {
     'use strict';
 
-    var mainNavHeight = $('#main-nav-ins').outerHeight();
+    var paradine = {
+        init : function() {
+            var $this = this;
 
-    $(window).bind('hashchange', function(e) {
-        //e.preventDefault();
-        //console.log(e);
+            $this.mainNavHeight = $('#main-nav-ins').outerHeight();
 
-        switch(location.hash) {
-            case '#home':
-                $('html, body').animate({scrollTop: 0}, 600);
-                break;
-            case '#about':
-                $('html, body').animate({scrollTop: $('#about-item').offset().top - mainNavHeight + 2}, 600);
-                break
-            case '#work':
-                $('html, body').animate({scrollTop: $('#work-item').offset().top - mainNavHeight + 2}, 600, function() {
+            $(window).bind('hashchange', function(e) {
+                //e.preventDefault();
+                //console.log(e);
 
-                });
-                break
-            case '#process':
-                $('html, body').animate({scrollTop: $('#process-item').offset().top - mainNavHeight + 2}, 600);
-                break
-            case '#contact':
-                $('html, body').animate({scrollTop: $('#contact-item').offset().top - mainNavHeight + 2}, 600);
-                break
-            case '#services':
-                $('html, body').animate({scrollTop: $('#services-item').offset().top - mainNavHeight + 2}, 600);
-                break
-            default:
-        }
+                switch(location.hash) {
+                    case '#home':
+                        $('html, body').animate({scrollTop: 0}, 600);
+                        break;
+                    case '#about':
+                        $('html, body').animate({scrollTop: $('#about-item').offset().top - $this.mainNavHeight + 2}, 600);
+                        break
+                    case '#work':
+                        $('html, body').animate({scrollTop: $('#work-item').offset().top - $this.mainNavHeight + 2}, 600, function() {
 
-    });
+                        });
+                        break
+                    case '#process':
+                        $('html, body').animate({scrollTop: $('#process-item').offset().top - $this.mainNavHeight + 2}, 600);
+                        break
+                    case '#contact':
+                        $('html, body').animate({scrollTop: $('#contact-item').offset().top - $this.mainNavHeight + 2}, 600);
+                        break
+                    case '#services':
+                        $('html, body').animate({scrollTop: $('#services-item').offset().top - $this.mainNavHeight + 2}, 600);
+                        break
+                    default:
+                }
 
-    jQuery(document).ready(function () {
-        var ani1 = false, ani2 = false, ani3 = false, ani4 = false, ani5 = false;
-        $(window).scroll(function() {
-            if(!ani1 && $('#about-item').offset().top - mainNavHeight - ($('header').outerHeight() / 2) <= $(window).scrollTop()) {
-                $('.progress .progress-bar').css("width",
-                    function() {
-                        return $(this).attr("aria-valuenow") + "%";
+            });
+
+            jQuery(document).ready(function () {
+                var ani1 = false, ani2 = false, ani3 = false, ani4 = false, ani5 = false;
+                $(window).scroll(function() {
+                    if(!ani1 && $('#about-item').offset().top - $this.mainNavHeight - ($('header').outerHeight() / 2) <= $(window).scrollTop()) {
+                        $('.progress .progress-bar').css("width",
+                            function() {
+                                return $(this).attr("aria-valuenow") + "%";
+                            }
+                        );
+                        setTimeout(function(){
+                            $('[data-textillate-skills]').textillate({ in: { effect: 'rotateIn', sync: false }});
+                        }, 650);
+                        $('[data-textillate-about]').textillate({ in: { effect: 'rotateIn', sync: true }});
+
+                        ani1 = true;
                     }
-                );
-                setTimeout(function(){
-                    $('[data-textillate-skills]').textillate({ in: { effect: 'rotateIn', sync: false }});
-                }, 650);
-                $('[data-textillate-about]').textillate({ in: { effect: 'rotateIn', sync: true }});
-
-                ani1 = true;
-            }
-            if(!ani2 && $('#work-item').offset().top - mainNavHeight <= $(window).scrollTop()) {
-                $('[data-textillate-work]').textillate({ in: { effect: 'bounceInLeft', sync: true }});
-                ani2 = true;
-            }
-        });
+                    if(!ani2 && $('#work-item').offset().top - $this.mainNavHeight <= $(window).scrollTop()) {
+                        $('[data-textillate-work]').textillate({ in: { effect: 'bounceInLeft', sync: true }});
+                        ani2 = true;
+                    }
+                });
 
 
-        $('.introduction h2').textillate({ in: { effect: 'rotateIn', sync: true }});
+                $('.introduction h2').textillate({ in: { effect: 'rotateIn', sync: true }});
 
-        $('body').scrollspy({ target: '#main-nav-ins', offset: parseInt(mainNavHeight) });
+                $('body').scrollspy({ target: '#main-nav-ins', offset: parseInt($this.mainNavHeight) });
 
-        $('#main-nav-ins').affix({
-          offset: jQuery('header').outerHeight() - jQuery('#main-nav-ins').outerHeight()
-        });
+                $('#main-nav-ins').affix({
+                offset: jQuery('header').outerHeight() - jQuery('#main-nav-ins').outerHeight()
+                });
 
-        if(mainNavHeight < $(document).scrollTop()) {
-            $('#main-nav-ins').removeClass('affix-bottom');
-            if(!$('#main-nav-ins').hasClass('affix')) {
-                $('#main-nav-ins').addClass('affix');
-                $('#main-nav-ins').css('top', 0);
-            }
+                if($this.mainNavHeight < $(document).scrollTop()) {
+                    $('#main-nav-ins').removeClass('affix-bottom');
+                    if(!$('#main-nav-ins').hasClass('affix')) {
+                        $('#main-nav-ins').addClass('affix');
+                        $('#main-nav-ins').css('top', 0);
+                    }
+                }
+
+                $('#main-nav-ins').on('affixed.bs.affix', function() {
+                //$('.affix-top-item').css("padding-top", parseInt($('.affix-top-item').css("padding-top")) + parseInt($this.mainNavHeight) + 'px');
+                });
+                $('#main-nav-ins').on('affix-top.bs.affix', function() {
+
+                //$('.affix-top-item').css("padding-top", '0px');
+                });
+                $('.hash-triggers a').on("click", function(e) {
+                    e.preventDefault();
+                    var hash = $(this).attr('href').replace('-item', '');
+                    location.hash = '#spacer';
+                    location.hash = hash;
+                });
+
+                //$('html, body').animate({scrollTop: $('#about').offset().top - $this.mainNavHeight}, 1000);
+
+                /* $('#about').ScrollTo({
+                    duration: 2000,
+                    durationMode: 'all'
+                }); */
+            });
         }
+    }
 
-        $('#main-nav-ins').on('affixed.bs.affix', function() {
-          //$('.affix-top-item').css("padding-top", parseInt($('.affix-top-item').css("padding-top")) + parseInt(mainNavHeight) + 'px');
-        });
-        $('#main-nav-ins').on('affix-top.bs.affix', function() {
-
-          //$('.affix-top-item').css("padding-top", '0px');
-        });
-        $('.hash-triggers a').on("click", function(e) {
-            e.preventDefault();
-            var hash = $(this).attr('href').replace('-item', '');
-            location.hash = '#spacer';
-            location.hash = hash;
-        });
-
-        //$('html, body').animate({scrollTop: $('#about').offset().top - mainNavHeight}, 1000);
-
-        /* $('#about').ScrollTo({
-            duration: 2000,
-            durationMode: 'all'
-        }); */
-  });
-
-
-
+    paradine.init();
+    
 })(jQuery);
 
 /*
