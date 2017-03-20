@@ -8,8 +8,27 @@
     'use strict';
 
     var paradine = {
+        animateAbout : function() {
+            var $this = this;
+            $('.progress .progress-bar').css("width",
+                function() {
+                    return $(this).attr("aria-valuenow") + "%";
+                }
+            );
+            setTimeout(function(){
+                $('[data-textillate-skills]').textillate({ in: { effect: 'rotateIn', sync: false }});
+            }, 650);
+            $('[data-textillate-about]').textillate({ in: { effect: 'rotateIn', sync: true }});
+            $this.ani1 = true;
+        },
         init : function() {
             var $this = this;
+
+            $this.ani1 = false;
+            $this.ani2 = false;
+            $this.ani3 = false;
+            $this.ani4 = false;
+            $this.ani5 = false;
 
             $this.mainNavHeight = $('#main-nav-ins').outerHeight();
 
@@ -44,24 +63,24 @@
             });
 
             jQuery(document).ready(function () {
-                var ani1 = false, ani2 = false, ani3 = false, ani4 = false, ani5 = false;
+                var aboutItemCheck = $('#about-item').offset().top - $this.mainNavHeight - ($('header').outerHeight() / 2) <= $(window).scrollTop();
+                var workItemCheck = $('#work-item').offset().top - $this.mainNavHeight <= $(window).scrollTop();
+                // init animations on page load
+                if(!$this.ani1 && aboutItemCheck) {
+                    $this.animateAbout();
+                }
+                if(!$this.ani2 && workItemCheck) {
+                    $('[data-textillate-work]').textillate({ in: { effect: 'bounceInLeft', sync: true }});
+                    $this.ani2 = true;
+                }
+                // init animations on scroll
                 $(window).scroll(function() {
-                    if(!ani1 && $('#about-item').offset().top - $this.mainNavHeight - ($('header').outerHeight() / 2) <= $(window).scrollTop()) {
-                        $('.progress .progress-bar').css("width",
-                            function() {
-                                return $(this).attr("aria-valuenow") + "%";
-                            }
-                        );
-                        setTimeout(function(){
-                            $('[data-textillate-skills]').textillate({ in: { effect: 'rotateIn', sync: false }});
-                        }, 650);
-                        $('[data-textillate-about]').textillate({ in: { effect: 'rotateIn', sync: true }});
-
-                        ani1 = true;
+                    if(!$this.ani1 && aboutItemCheck) {
+                        $this.animateAbout();
                     }
-                    if(!ani2 && $('#work-item').offset().top - $this.mainNavHeight <= $(window).scrollTop()) {
+                    if(!$this.ani2 && workItemCheck) {
                         $('[data-textillate-work]').textillate({ in: { effect: 'bounceInLeft', sync: true }});
-                        ani2 = true;
+                        $this.ani2 = true;
                     }
                 });
 
@@ -96,12 +115,6 @@
                     location.hash = hash;
                 });
 
-                //$('html, body').animate({scrollTop: $('#about').offset().top - $this.mainNavHeight}, 1000);
-
-                /* $('#about').ScrollTo({
-                    duration: 2000,
-                    durationMode: 'all'
-                }); */
             });
         }
     }
