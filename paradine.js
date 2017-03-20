@@ -63,22 +63,20 @@
             });
 
             jQuery(document).ready(function () {
-                var aboutItemCheck = $('#about-item').offset().top - $this.mainNavHeight - ($('header').outerHeight() / 2) <= $(window).scrollTop();
-                var workItemCheck = $('#work-item').offset().top - $this.mainNavHeight <= $(window).scrollTop();
                 // init animations on page load
-                if(!$this.ani1 && aboutItemCheck) {
+                if(!$this.ani1 && $('#about-item').offset().top - $this.mainNavHeight - ($('header').outerHeight() / 2) <= $(window).scrollTop()) {
                     $this.animateAbout();
                 }
-                if(!$this.ani2 && workItemCheck) {
+                if(!$this.ani2 && $('#work-item').offset().top - $this.mainNavHeight <= $(window).scrollTop()) {
                     $('[data-textillate-work]').textillate({ in: { effect: 'bounceInLeft', sync: true }});
                     $this.ani2 = true;
                 }
                 // init animations on scroll
                 $(window).scroll(function() {
-                    if(!$this.ani1 && aboutItemCheck) {
+                    if(!$this.ani1 && $('#about-item').offset().top - $this.mainNavHeight - ($('header').outerHeight() / 2) <= $(window).scrollTop()) {
                         $this.animateAbout();
                     }
-                    if(!$this.ani2 && workItemCheck) {
+                    if(!$this.ani2 && $('#work-item').offset().top - $this.mainNavHeight <= $(window).scrollTop()) {
                         $('[data-textillate-work]').textillate({ in: { effect: 'bounceInLeft', sync: true }});
                         $this.ani2 = true;
                     }
