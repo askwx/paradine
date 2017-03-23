@@ -113,22 +113,38 @@
                     location.hash = hash;
                 });
 
+                $('#proposal-form').submit(function() {
+
+                    var postData = $(this).serialize();
+
+                    var submit = $(this).find('button[type="submit"]');
+                    var spinner = $(this).find('.formSpinner');
+
+                    submit.hide();
+                    spinner.show();
+
+                    $.ajax({
+                      url: 'process.php',
+                      type: 'post',
+                      data: postData,
+                      success: function(data, status) {
+                          spinner.hide();
+                          submit.show();
+                          alert('Message sent!');
+                      },
+                      error: function(xhr, desc, err) {
+                          spinner.hide();
+                          submit.show();
+                      }
+                    });
+
+                    return false;
+                })
+
             });
         }
     }
 
     paradine.init();
-    
+
 })(jQuery);
-
-/*
-var elementPosition = $('#navigation').offset();
-
-$(window).scroll(function(){
-        if($(window).scrollTop() > elementPosition.top){
-              $('#navigation').css('position','fixed').css('top','0');
-        } else {
-            $('#navigation').css('position','static');
-        }
-});
-*/
