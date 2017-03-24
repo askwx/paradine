@@ -29,6 +29,12 @@ if($token == '900b451!z4k65009' && $type) {
                 // send message
                 $response = "Message sent.";
 
+                $body = "$name<br>";
+                $body .= "$phone<br>";
+                $body .= "$email<br>";
+                $body .= "$date<br>";
+                $body .= "$message<br>";
+
                 require_once('phpmailer/class.phpmailer.php');
                 $mail = new PHPMailer();
             	$mail->SetFrom('brandon95547@gmail.com', 'Brandon S');
@@ -36,7 +42,7 @@ if($token == '900b451!z4k65009' && $type) {
                 $mail->Subject = "Request for Proposal";
 
                 //$mail->AltBody = $message;
-                $mail->MsgHTML($message);
+                $mail->MsgHTML($body);
 
                 if(!$mail->Send()) {
 
