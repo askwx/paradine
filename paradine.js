@@ -30,6 +30,8 @@
             $this.ani4 = false;
             $this.ani5 = false;
 
+            $this.slogans = ["A cool dude", "A expert at programming", "sentence three"];
+
             $this.mainNavHeight = $('#main-nav-ins').outerHeight();
 
             $(window).bind('hashchange', function(e) {
@@ -84,6 +86,13 @@
 
 
                 $('.introduction h2').textillate({ in: { effect: 'rotateIn', sync: true }});
+                
+                $('.slogans').textillate({ 
+                    in: { effect: 'rollIn', sync: false },
+                    out: { effect: 'rollOut', sync: false },
+                    minDisplayTime : 500,
+                    loop: true
+                });
 
                 $('body').scrollspy({ target: '#main-nav-ins', offset: parseInt($this.mainNavHeight) });
 
