@@ -3,7 +3,7 @@
  * Template Name: Paradine - Creative Portfoliof
  * Version      : 1.4
  */
-body { color: #666; }
+body, .iconset-666 i { color: #666; }
 ul, ol { padding-left: 30px; }
 html, body, header, .intro-bg { height: 100%; line-height: 1.5 }
 .portfolio-item { border: 1px solid #F1F1F1; }
@@ -29,9 +29,10 @@ a { outline: none; }
 header .navbar-default, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover { background-color: transparent; border-color: transparent; }
 h1, h2, h3, h4, h5, h6 {
 font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
-font-weight: lighter;
+font-weight: 400;
 margin-top: 0;
 }
+.lighter { font-weight: lighter; }
 .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>li>a:hover, .introduction, .btn.focus, .btn:focus, .btn:hover { color: white; }
 .navbar-default .navbar-brand { letter-spacing: 4px; }
 .navbar-default .navbar-nav>li>a { letter-spacing: 1px; font-size: 13px; }
@@ -96,7 +97,7 @@ border: 0;
     width: 50px;
 }
 .full-line>*:before { width: 100%; }
-.text-primary {
+.text-primary, .iconset-primary i {
     color: #37a7c3;
 }
 .text-medium {
