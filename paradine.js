@@ -57,7 +57,9 @@
                         $('html, body').animate({scrollTop: $('#contact-item').offset().top - $this.mainNavHeight + 2}, 600);
                         break
                     case '#services':
-                        $('html, body').animate({scrollTop: $('#services-item').offset().top - $this.mainNavHeight + 2}, 600);
+                        $('html, body').animate({scrollTop: $('#services-item').offset().top - $this.mainNavHeight + 2}, 600, function() {
+
+                        });
                         break
                     default:
                 }
@@ -86,8 +88,8 @@
 
 
                 $('.introduction h2').textillate({ in: { effect: 'rotateIn', sync: true }});
-                
-                $('.slogans').textillate({ 
+
+                $('.slogans').textillate({
                     in: { effect: 'rollIn', sync: false },
                     out: { effect: 'rollOut', sync: false },
                     minDisplayTime : 500,
@@ -96,9 +98,7 @@
 
                 $('body').scrollspy({ target: '#main-nav-ins', offset: parseInt($this.mainNavHeight) });
 
-                $('#main-nav-ins').affix({
-                offset: jQuery('header').outerHeight() - jQuery('#main-nav-ins').outerHeight()
-                });
+                $('#main-nav-ins').affix({});
 
                 if($this.mainNavHeight < $(document).scrollTop()) {
                     $('#main-nav-ins').removeClass('affix-bottom');
@@ -109,8 +109,17 @@
                 }
 
                 $('#main-nav-ins').on('affixed.bs.affix', function() {
-                //$('.affix-top-item').css("padding-top", parseInt($('.affix-top-item').css("padding-top")) + parseInt($this.mainNavHeight) + 'px');
+
                 });
+
+                $('.navbar-default .navbar-toggle').on("click", function() {
+                    $('#main-nav-ins').toggleClass('nav-active');
+                });
+
+                $('.navbar-default .navbar-nav>li>a').on("click", function() {
+                    $('.navbar-default .navbar-toggle').click();
+                });
+
                 $('#main-nav-ins').on('affix-top.bs.affix', function() {
 
                 //$('.affix-top-item').css("padding-top", '0px');

@@ -4,6 +4,7 @@
  * Version      : 1.4
  */
 body, .iconset-666 i { color: #666; }
+body { font-weight: 300; }
 ul, ol { padding-left: 30px; }
 html, body, header, .intro-bg { height: 100%; line-height: 1.5 }
 .portfolio-item { border: 1px solid #F1F1F1; }
@@ -16,6 +17,7 @@ html, body, header, .intro-bg { height: 100%; line-height: 1.5 }
     font-size: 13px;
     color: #666;
 }
+
 span.left {
     left: 0;
 }
@@ -26,7 +28,8 @@ span.right {
 img { max-width: 100%; }
 a { outline: none; }
 .spyelement { position: relative; }
-header .navbar-default, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover { background-color: transparent; border-color: transparent; }
+.navbar-default .navbar-toggle .icon-bar { background-color: white; }
+header .navbar-default, .navbar-default .navbar-toggle, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover { background-color: transparent; border-color: transparent; }
 h1, h2, h3, h4, h5, h6 {
 font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-weight: 400;
@@ -97,7 +100,7 @@ border: 0;
     width: 50px;
 }
 .full-line>*:before { width: 100%; }
-.text-primary, .iconset-primary i {
+.text-primary, .iconset-primary i, a {
     color: #37a7c3;
 }
 .text-medium {
@@ -234,3 +237,10 @@ text-align: center;
 
  .text-white { color: white; }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover { color: #47bce2; }
+
+@media (max-width: 767px) {
+    .navbar-default.nav-active {
+        height: 100%;
+        background-color: #0a6f8b;
+    }
+}
