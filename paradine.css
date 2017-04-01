@@ -56,7 +56,9 @@ margin-top: 0;
 }
 header .introduction {
     height: 100%;
-    background: rgba(4,122,155,0.85)
+    background: rgba(4,122,155,0.85);
+    padding-left: 15px;
+    padding-right: 15px;
 }
 header .parent {
     display: table;

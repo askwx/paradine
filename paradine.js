@@ -30,6 +30,8 @@
             $this.ani4 = false;
             $this.ani5 = false;
 
+            $this.isMobileMenuActive = false;
+
             $this.slogans = ["A cool dude", "A expert at programming", "sentence three"];
 
             $this.mainNavHeight = $('#main-nav-ins').outerHeight();
@@ -114,10 +116,18 @@
 
                 $('.navbar-default .navbar-toggle').on("click", function() {
                     $('#main-nav-ins').toggleClass('nav-active');
+                    if(!$this.isMobileMenuActive) {
+                        $this.isMobileMenuActive = true;
+                    }
+                    else {
+                        $this.isMobileMenuActive = false;
+                    }
                 });
 
                 $('.navbar-default .navbar-nav>li>a').on("click", function() {
-                    $('.navbar-default .navbar-toggle').click();
+                    if($this.isMobileMenuActive) {
+                        $('.navbar-default .navbar-toggle').click();
+                    }
                 });
 
                 $('#main-nav-ins').on('affix-top.bs.affix', function() {
