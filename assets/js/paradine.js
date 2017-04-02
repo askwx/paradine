@@ -1,7 +1,7 @@
 /**
- * Author       : ParadineIns <paradineins@gmail.com>
+ * Author       : Brandon Sanders <brandon95547@gmail.com>
  * Template Name: Paradine - Creative Portfolio Bootstrap Template
- * Version      : 1.0
+ * Version      : 2.2
  */
 
 (function ($) {
