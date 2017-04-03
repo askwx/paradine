@@ -40,7 +40,7 @@ margin-top: 0;
 .navbar-default .navbar-brand { letter-spacing: 4px; }
 .navbar-default .navbar-nav>li>a { letter-spacing: 1px; font-size: 13px; }
 .intro-bg { background-image: url(assets/images/introduction-bg.jpg); }
-.introduction-arrow { position: absolute; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); bottom: 30px; }
+.introduction-arrow { position: absolute; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); bottom: 30px; z-index:1 }
 .infinite {
     animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
