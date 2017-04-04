@@ -4,6 +4,7 @@
  * Version      : 1.4
  */
 body, .iconset-666 i { color: #666; }
+a.btn:focus { outline: none; }
 body { font-weight: 300; }
 ul, ol { padding-left: 30px; }
 html, body, header, .intro-bg { height: 100%; line-height: 1.5 }
@@ -17,7 +18,7 @@ html, body, header, .intro-bg { height: 100%; line-height: 1.5 }
     font-size: 13px;
     color: #666;
 }
-
+.btn.active, .btn:active { box-shadow: none; }
 span.left {
     left: 0;
 }
