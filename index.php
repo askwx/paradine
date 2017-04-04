@@ -503,7 +503,7 @@
             </div>
         </div>
     </div>
-    
+
     <footer class="padbottom-60 padtop-60 bg-light text-center">
         &copy; 2017 Brandon Sanders Portfolio | All Rights Reserved.
     </footer>
@@ -511,7 +511,6 @@
     <script src="assets/js/jquery.lettering.js"></script>
     <script src="assets/js/jquery.textillate.js"></script>
     <script src="assets/js/particles.min.js" type="text/javascript"></script>
-    <script src="assets/js/app.js" type="text/javascript"></script>
 
     <script src="assets/js/paradine.js?v=17"></script>
 
