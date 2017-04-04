@@ -10,7 +10,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,700%7COpen+Sans:300italic,400italic,400,300%7CRoboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
-    <link href="assets/animate.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/paradine.css?v=3">
 
@@ -388,137 +388,132 @@
             </div>
         </div><!-- .row -->
     </div>
-<div class="bg-light" id="contact-item">
+    <div class="bg-light" id="contact-item">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="padtop-60 padbottom-24" id="work-item">
+                        <div class="text-center">
+                            <div class="base-line center-line marbottom-32">
+                                <h2 class="ins-h1" data-textillate-contact>Request Proposal</h2>
+                            </div>
+
+                            <p>Fill out the form below to request a proposal. All fields are required.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form class="marbottom-3" action="process.php" method="post" id="proposal-form">
+
+                <input type="hidden" name="processType" value="eyJ0b2tlbiI6IjkwMGI0NTEhejRrNjUwMDkiLCJ0eXBlIjoicHJvcG9zYWwifQ==">
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="name" class="sr-only">Name</label>
+                            <input type="text" required class="form-control" name="name" id="name" placeholder="Name" style="background-repeat: repeat; background-image: none; background-position: 0% 0%;">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="sr-only">Phone</label>
+                            <input type="text" required class="form-control" name="phone" id="phone" placeholder="Phone">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="subject" class="sr-only">Email</label>
+                            <input type="text" required class="form-control" name="email" id="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="date" class="sr-only">Preferred Date &amp; Time</label>
+                            <input type="text" required class="form-control" name="date" id="date" placeholder="Preferred Date &amp; Time">
+                        </div>
+                    </div>
+                </div>
+                <div class="row padbottom-60">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                          <label for="message" class="sr-only">Your Message</label>
+                          <textarea required class="form-control" name="message" id="message" rows="3"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-lg btn-default size-16">Submit <i class="fa fa-chevron-circle-right"></i></button>
+                            <img src="assets/images/blue-spinner.gif" width="24" class="formSpinner">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div><!-- .container -->
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="padtop-60 padbottom-24" id="work-item">
+                <div class="padtop-60 padbottom-24" id="services-item">
                     <div class="text-center">
                         <div class="base-line center-line marbottom-32">
-                            <h2 class="ins-h1" data-textillate-contact>Request Proposal</h2>
+                            <h2 class="ins-h1" data-textillate-contact>Services</h2>
                         </div>
 
-                        <p>Fill out the form below to request a proposal. All fields are required.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <form class="marbottom-3" action="process.php" method="post" id="proposal-form">
-
-            <input type="hidden" name="processType" value="eyJ0b2tlbiI6IjkwMGI0NTEhejRrNjUwMDkiLCJ0eXBlIjoicHJvcG9zYWwifQ==">
-
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="name" class="sr-only">Name</label>
-                        <input type="text" required class="form-control" name="name" id="name" placeholder="Name" style="background-repeat: repeat; background-image: none; background-position: 0% 0%;">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone" class="sr-only">Phone</label>
-                        <input type="text" required class="form-control" name="phone" id="phone" placeholder="Phone">
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="subject" class="sr-only">Email</label>
-                        <input type="text" required class="form-control" name="email" id="email" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <label for="date" class="sr-only">Preferred Date &amp; Time</label>
-                        <input type="text" required class="form-control" name="date" id="date" placeholder="Preferred Date &amp; Time">
-                    </div>
-                </div>
+        <div class="row text-center iconset-34 marset-16 padbottom-60">
+            <div class="col-sm-4 marbottom-32">
+                <div><i class="fa fa-graduation-cap text-primary"></i></div>
+                <h3>Educational Games</h3>
+                <p>
+                    From flash cards to trivia applications, there are many ways to build a game to help people learn.
+                </p>
             </div>
-            <div class="row padbottom-60">
-                <div class="col-lg-12">
-                    <div class="form-group">
-                      <label for="message" class="sr-only">Your Message</label>
-                      <textarea required class="form-control" name="message" id="message" rows="3"></textarea>
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-lg btn-default size-16">Submit <i class="fa fa-chevron-circle-right"></i></button>
-                        <img src="assets/images/blue-spinner.gif" width="24" class="formSpinner">
-                    </div>
-                </div>
+            <div class="col-sm-4 marbottom-32">
+                <div><i class="fa fa-wrench text-primary"></i></div>
+                <h3>Application Development</h3>
+                <p>
+                    Work order tracking, point of sale, check-in software, educational applications.
+                </p>
             </div>
-        </form>
-    </div><!-- .container -->
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="padtop-60 padbottom-24" id="services-item">
-                <div class="text-center">
-                    <div class="base-line center-line marbottom-32">
-                        <h2 class="ins-h1" data-textillate-contact>Services</h2>
-                    </div>
-
-                </div>
+            <div class="col-sm-4 marbottom-32">
+                <div><i class="fa fa-globe text-primary"></i></div>
+                <h3>Website Development</h3>
+                <p>
+                    All websites are completely responsive and tested to work in all major devices.
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <div><i class="fa fa-spinner text-primary"></i></div>
+                <h3>Interactive Brochures</h3>
+                <p>
+                    I create well organized interactive brochures of your business to showcase your product.
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <div><i class="fa fa-wordpress text-primary"></i></div>
+                <h3>Wordpress Development</h3>
+                <p>
+                    Do you have a website that needs to be managed by Wordpress or do you need a theme developed?
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <div><i class="fa fa-object-group text-primary"></i></div>
+                <h3>User Interface Design</h3>
+                <p>
+                    If you have an idea, we can take it through the design process and build out a prototype.
+                </p>
             </div>
         </div>
     </div>
-    <div class="row text-center iconset-34 marset-16 padbottom-60">
-        <div class="col-sm-4 marbottom-32">
-            <div><i class="fa fa-graduation-cap text-primary"></i></div>
-            <h3>Educational Games</h3>
-            <p>
-                From flash cards to trivia applications, there are many ways to build a game to help people learn.
-            </p>
-        </div>
-        <div class="col-sm-4 marbottom-32">
-            <div><i class="fa fa-wrench text-primary"></i></div>
-            <h3>Application Development</h3>
-            <p>
-                Work order tracking, point of sale, check-in software, educational applications.
-            </p>
-        </div>
-        <div class="col-sm-4 marbottom-32">
-            <div><i class="fa fa-globe text-primary"></i></div>
-            <h3>Website Development</h3>
-            <p>
-                All websites are completely responsive and tested to work in all major devices.
-            </p>
-        </div>
-        <div class="col-sm-4">
-            <div><i class="fa fa-spinner text-primary"></i></div>
-            <h3>Interactive Brochures</h3>
-            <p>
-                I create well organized interactive brochures of your business to showcase your product.
-            </p>
-        </div>
-        <div class="col-sm-4">
-            <div><i class="fa fa-wordpress text-primary"></i></div>
-            <h3>Wordpress Development</h3>
-            <p>
-                Do you have a website that needs to be managed by Wordpress or do you need a theme developed?
-            </p>
-        </div>
-        <div class="col-sm-4">
-            <div><i class="fa fa-object-group text-primary"></i></div>
-            <h3>User Interface Design</h3>
-            <p>
-                If you have an idea, we can take it through the design process and build out a prototype.
-            </p>
-        </div>
-    </div>
-</div>
-
-
-<footer class="padbottom-60 padtop-60 bg-light text-center">
-    &copy; 2017 Brandon Sanders Portfolio | All Rights Reserved.
-</footer>
-
-
-
-
+    
+    <footer class="padbottom-60 padtop-60 bg-light text-center">
+        &copy; 2017 Brandon Sanders Portfolio | All Rights Reserved.
+    </footer>
 
     <script src="assets/js/jquery.lettering.js"></script>
     <script src="assets/js/jquery.textillate.js"></script>
     <script src="assets/js/particles.min.js" type="text/javascript"></script>
     <script src="assets/js/app.js" type="text/javascript"></script>
 
-    <script src="assets/js/paradine.js?v=16"></script>
+    <script src="assets/js/paradine.js?v=17"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

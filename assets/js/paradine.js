@@ -137,7 +137,6 @@
                 $('.hash-triggers a').on("click", function(e) {
                     e.preventDefault();
                     var hash = $(this).attr('href').replace('-item', '');
-                    //location.hash = '#spacer';
                     location.hash = hash;
                 });
 
