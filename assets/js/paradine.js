@@ -16,7 +16,11 @@
                 }
             );
             setTimeout(function(){
-                $('[data-textillate-skills]').textillate({ in: { effect: 'rotateIn', sync: false }});
+                //$('[data-textillate-skills]').textillate({ in: { effect: 'rotateIn', sync: false }});
+                /* $('#about-item .row .animated').removeClass().addClass('slideInLeft' + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                  $(this).removeClass();
+              }); */
+              $('#about-item .animate-element').removeClass("animated bounceInLeft").addClass('animated bounceInLeft');
             }, 650);
             $('[data-textillate-about]').textillate({ in: { effect: 'rotateIn', sync: true }});
             $this.ani1 = true;

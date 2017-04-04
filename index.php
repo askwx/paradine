@@ -95,18 +95,22 @@
                     <div class="row">
                         <link rel="stylesheet" href="assets/css/particles.css">
                         <div class="col-sm-7 hash-triggers">
+
                             <!-- <div class="base-line left-line full-line marbottom-162">
                                 <h2>Services</h2>
                             </div> -->
-                            <div class="base-line left-line full-line marbottom-32">
-                                <h2 class="text-24" data-textillate-skills>My Skills</h2>
+
+                            <div class="animate-element">
+                                <div class="base-line left-line full-line marbottom-32">
+                                    <h2 class="text-24" data-textillate-skills>My Skills</h2>
+                                </div>
+
+                                <p>I have worked primarily with Linux, Apache, MySQL and PHP with HTML5/Javascript, building websites and applications.
+                                    I use Bootstrap, jQuery and other common frameworks to keep applications responsive. I also develop Wordpress themes
+                                    and plugins, so feel free to submit a <a href="#contact-item">request for proposal</a>.</p>
+
+                                <a href="#services-item" class="btn btn-outline btn-primary-outline marbottom-32">Services</a>
                             </div>
-
-                            <p>I have worked primarily with Linux, Apache, MySQL and PHP with HTML5/Javascript, building websites and applications.
-                                I use Bootstrap, jQuery and other common frameworks to keep applications responsive. I also develop Wordpress themes
-                                and plugins, so feel free to submit a <a href="#contact-item">request for proposal</a>.</p>
-
-                            <a href="#services-item" class="btn btn-outline btn-primary-outline marbottom-32">Services</a>
 
                         </div>
                         <div class="col-sm-5">
