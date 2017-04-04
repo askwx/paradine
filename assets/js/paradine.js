@@ -116,6 +116,7 @@
                     }
                 }
 
+                /* this fixes the issue to prevent click events from triggering affix */
                 $('#main-nav-ins').on('affix.bs.affix', function() {
                     if( !$( window ).scrollTop() ) return false;
                 });
@@ -130,6 +131,7 @@
                     }
                 });
 
+                /* this closes the mobile menu and animates to the section */
                 $('.navbar-default .navbar-nav>li>a').on("click", function() {
                     if($this.isMobileMenuActive) {
                         $('.navbar-default .navbar-toggle').click();
