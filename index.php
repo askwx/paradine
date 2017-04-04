@@ -93,6 +93,7 @@
                     </div>
 
                     <div class="row">
+                        <link rel="stylesheet" href="assets/css/particles.css">
                         <div class="col-sm-7 hash-triggers">
                             <!-- <div class="base-line left-line full-line marbottom-162">
                                 <h2>Services</h2>
@@ -512,12 +513,22 @@
 
 
 
-    <script src="assets/jquery.lettering.js"></script>
-    <script src="assets/jquery.textillate.js"></script>
-    <link rel="stylesheet" href="assets/particles.css">
-    <script src="assets/particles.min.js" type="text/javascript"></script>
-    <script src="assets/app.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.lettering.js"></script>
+    <script src="assets/js/jquery.textillate.js"></script>
+    <script src="assets/js/particles.min.js" type="text/javascript"></script>
+    <script src="assets/js/app.js" type="text/javascript"></script>
 
-    <script src="assets/paradine.js?v=15"></script>
+    <script src="assets/js/paradine.js?v=16"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-96763349-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
   </body>
 </html>
