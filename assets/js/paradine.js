@@ -116,8 +116,8 @@
                     }
                 }
 
-                $('#main-nav-ins').on('affixed.bs.affix', function() {
-
+                $('#main-nav-ins').on('affix.bs.affix', function() {
+                    if( !$( window ).scrollTop() ) return false;
                 });
 
                 $('.navbar-default .navbar-toggle').on("click", function() {

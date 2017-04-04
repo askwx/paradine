@@ -129,7 +129,7 @@ border: 0;
 .text-20 { font-size: 20px; }
 .form-control {
     border-radius: 0;
-        border-color: #DDD;
+        border-color: #e4e4e4;
         padding: 12px;
         height: 46px;
 }

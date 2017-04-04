@@ -512,7 +512,7 @@
     <script src="assets/js/jquery.textillate.js"></script>
     <script src="assets/js/particles.min.js" type="text/javascript"></script>
 
-    <script src="assets/js/paradine.js?v=17"></script>
+    <script src="assets/js/paradine.js?v=<?=time()?>"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
