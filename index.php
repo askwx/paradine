@@ -157,7 +157,7 @@
                 	<section>
                 	<div class="marbottom-5">
                 		<div><i class="fa fa-search marbottom-16"></i></div>
-                		<h3 class="">User Research</h3>
+                		<h3 class="lighter">User Research</h3>
                 		<p>Research is always needed before any project to learn our target market.</p>
 
 
@@ -168,7 +168,7 @@
                 	<section>
                 	<div class="marbottom-5">
                 		<div><i class="fa fa-object-group marbottom-16"></i></div>
-                		<h3 class="">Wireframes</h3>
+                		<h3 class="lighter">Wireframes</h3>
                 		<p>Building a wireframe of the user interface brings the product to life.</p>
 
 
@@ -180,7 +180,7 @@
                 	<section>
                 	<div class="marbottom-5">
                 		<div><i class="fa fa-mouse-pointer marbottom-16"></i></div>
-                		<h3 class="">Clickthrough&nbsp;Prototypes</h3>
+                		<h3 class="lighter">Clickthrough&nbsp;Prototypes</h3>
                 		<p>Demo your product in a beta environment before launch to work out any bugs.</p>
 
 
@@ -192,7 +192,7 @@
                 	<section>
                 	<div class="marbottom-5">
                 		<div><i class="fa fa-rocket marbottom-16"></i></div>
-                		<h3 class="">Launch</h3>
+                		<h3 class="lighter">Launch</h3>
                 		<p>Site deployemnt and testing. Setting up your hosting package.</p>
 
 
