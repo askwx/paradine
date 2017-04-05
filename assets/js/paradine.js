@@ -149,6 +149,10 @@
                 $('.hash-triggers a').on("click", function(e) {
                     e.preventDefault();
                     var hash = $(this).attr('href').replace('-item', '');
+                    if(hash == location.hash) {
+                        location.hash = '';
+                        window.history.back(1);
+                    }
                     location.hash = hash;
                 });
 
