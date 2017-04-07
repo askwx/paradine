@@ -12,7 +12,7 @@
 
     <link href="assets/css/animate.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/paradine.css?v=3">
+    <link rel="stylesheet" href="assets/css/paradine.css?v=4">
 
   </head>
   <body>
@@ -304,12 +304,12 @@
                     	<div class="flipper">
                     		<div class="front">
                     			<!-- front content -->
-                                <img src="assets/images/portfolio5.jpg">
+                                <img src="assets/images/portfolio6.jpg">
                     		</div>
                     		<div class="back text-thin text-uppercase size-20">
                                 <div>
                         			<!-- back content -->
-                                    Wayneos Silver Bullet<br><a href="http://wayneos.cadoyen.com/" target="_blank" class="size-smaller text-primary">wayneossilverbullet.com</a>
+                                    Gottalife DVD Design<br><span class="size-smaller text-primary">GOTTALIFE.ORG</span>
                                 </div>
                     		</div>
                     	</div>
@@ -322,12 +322,12 @@
                     	<div class="flipper">
                     		<div class="front">
                     			<!-- front content -->
-                                <img src="assets/images/portfolio6.jpg">
+                                <img src="assets/images/portfolio9.jpg">
                     		</div>
                     		<div class="back text-thin text-uppercase size-20">
                                 <div>
                         			<!-- back content -->
-                                    Gottalife DVD Design<br><span class="size-smaller text-primary">GOTTALIFE.ORG</span>
+                                    Select Tech Security<br><a href="http://selecttechsecurity.cadoyen.com" target="_blank" class="size-smaller text-primary">Select Tech Security</a>
                                 </div>
                     		</div>
                     	</div>
@@ -365,25 +365,7 @@
                     		<div class="back text-thin text-uppercase size-20">
                                 <div>
                         			<!-- back content -->
-                                    Hebrew Lessons Learning Application<br><a href="https://www.hebrew-lessons.com/" target="_blank" class="size-smaller text-primary">HEBREWLESSONS.COM</a>
-                                </div>
-                    		</div>
-                    	</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="portfolio-item">
-                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                    	<div class="flipper">
-                    		<div class="front">
-                    			<!-- front content -->
-                                <img src="assets/images/portfolio9.jpg">
-                    		</div>
-                    		<div class="back text-thin text-uppercase size-20">
-                                <div>
-                        			<!-- back content -->
-                                    Select Tech Security<br><a href="#" target="_blank" class="size-smaller text-primary">SELECTTECHSECURITY.COM</a>
+                                    Hebrew Lessons Learning Application<br><a href="#" target="_blank" class="size-smaller text-primary">The Hebrew Challenge</a>
                                 </div>
                     		</div>
                     	</div>
