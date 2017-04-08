@@ -25,8 +25,27 @@
             $('[data-textillate-about]').textillate({ in: { effect: 'rotateIn', sync: true }});
             $this.ani1 = true;
         },
+        runAnimationsIfVisible : function() {
+            if(!$this.ani1 && $('#about-item').offset().top - $this.mainNavHeight - ($('header').outerHeight() / 2) <= $(window).scrollTop()) {
+                $this.animateAbout();
+            }
+            if(!$this.ani2 && $('#work-item').offset().top - $this.mainNavHeight <= $(window).scrollTop()) {
+                $('[data-textillate-work]').textillate({ in: { effect: 'bounceInLeft', sync: true }});
+                $this.ani2 = true;
+            }
+            if(!$this.ani3 && $('#contact-item').offset().top - $this.mainNavHeight <= $(window).scrollTop()) {
+                $('[data-textillate-contact]').textillate({ in: { effect: 'bounceInLeft', sync: true }});
+                $this.ani3 = true;
+            }
+            if(!$this.ani4 && $('#services-item').offset().top - $this.mainNavHeight <= $(window).scrollTop()) {
+                $('[data-textillate-services]').textillate({ in: { effect: 'bounceInLeft', sync: true }});
+                $this.ani4 = true;
+            }
+        },
         init : function() {
             var $this = this;
+
+            window.$this = $this;
 
             $this.ani1 = false;
             $this.ani2 = false;
@@ -87,6 +106,8 @@
             });
 
             jQuery(document).ready(function () {
+
+                window.$this.runAnimationsIfVisible();
 
                 $(window).scroll(function() {
 
