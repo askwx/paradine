@@ -33,10 +33,7 @@
             $this.ani3 = false;
             $this.ani4 = false;
             $this.ani5 = false;
-
             $this.isMobileMenuActive = false;
-
-            $this.slogans = ["A cool dude", "A expert at programming", "sentence three"];
 
             $this.mainNavHeight = $('#main-nav-ins').outerHeight();
 
@@ -47,65 +44,53 @@
             });
 
             $(window).bind('hashchange', function(e) {
-                //e.preventDefault();
-                //console.log(e);
-
                 switch(location.hash) {
                     case '#home':
                         $('html, body').animate({scrollTop: 0}, 600);
                         break;
                     case '#about':
-                        $('html, body').animate({scrollTop: $('#about-item').offset().top - $this.mainNavHeight + 2}, 600);
+                        $('html, body').animate({scrollTop: $('#about-item').offset().top - $this.mainNavHeight + 2}, 600, function() {
+                            if(!$this.ani1 && $('#about-item').offset().top - $this.mainNavHeight - ($('header').outerHeight() / 2) <= $(window).scrollTop()) {
+                                $this.animateAbout();
+                            }
+                        });
                         break
                     case '#work':
                         $('html, body').animate({scrollTop: $('#work-item').offset().top - $this.mainNavHeight + 2}, 600, function() {
-
+                            if(!$this.ani2 && $('#work-item').offset().top - $this.mainNavHeight <= $(window).scrollTop()) {
+                                $('[data-textillate-work]').textillate({ in: { effect: 'bounceInLeft', sync: true }});
+                                $this.ani2 = true;
+                            }
                         });
                         break
                     case '#process':
                         $('html, body').animate({scrollTop: $('#process-item').offset().top - $this.mainNavHeight + 2}, 600);
                         break
                     case '#contact':
-                        $('html, body').animate({scrollTop: $('#contact-item').offset().top - $this.mainNavHeight + 2}, 600);
+                        $('html, body').animate({scrollTop: $('#contact-item').offset().top - $this.mainNavHeight + 2}, 600, function() {
+                            if(!$this.ani3 && $('#contact-item').offset().top - $this.mainNavHeight <= $(window).scrollTop()) {
+                                $('[data-textillate-contact]').textillate({ in: { effect: 'bounceInLeft', sync: true }});
+                                $this.ani3 = true;
+                            }
+                        });
                         break
                     case '#services':
                         $('html, body').animate({scrollTop: $('#services-item').offset().top - $this.mainNavHeight + 2}, 600, function() {
-
+                            if(!$this.ani4 && $('#services-item').offset().top - $this.mainNavHeight <= $(window).scrollTop()) {
+                                $('[data-textillate-services]').textillate({ in: { effect: 'bounceInLeft', sync: true }});
+                                $this.ani4 = true;
+                            }
                         });
                         break
                     default:
                 }
-
             });
 
             jQuery(document).ready(function () {
-                // init animations on page load
-                if(!$this.ani1 && $('#about-item').offset().top - $this.mainNavHeight - ($('header').outerHeight() / 2) <= $(window).scrollTop()) {
-                    $this.animateAbout();
-                }
-                if(!$this.ani2 && $('#work-item').offset().top - $this.mainNavHeight <= $(window).scrollTop()) {
-                    $('[data-textillate-work]').textillate({ in: { effect: 'bounceInLeft', sync: true }});
-                    $this.ani2 = true;
-                }
-                if(!$this.ani3 && $('#contact-item').offset().top - $this.mainNavHeight <= $(window).scrollTop()) {
-                    $('[data-textillate-contact]').textillate({ in: { effect: 'bounceInLeft', sync: true }});
-                    $this.ani3 = true;
-                }
-                if(!$this.ani4 && $('#services-item').offset().top - $this.mainNavHeight <= $(window).scrollTop()) {
-                    $('[data-textillate-services]').textillate({ in: { effect: 'bounceInLeft', sync: true }});
-                    $this.ani4 = true;
-                }
-                // init animations on scroll
-                $(window).scroll(function() {
-                    if(!$this.ani1 && $('#about-item').offset().top - $this.mainNavHeight - ($('header').outerHeight() / 2) <= $(window).scrollTop()) {
-                        $this.animateAbout();
-                    }
-                    if(!$this.ani2 && $('#work-item').offset().top - $this.mainNavHeight <= $(window).scrollTop()) {
-                        $('[data-textillate-work]').textillate({ in: { effect: 'bounceInLeft', sync: true }});
-                        $this.ani2 = true;
-                    }
-                });
 
+                $(window).scroll(function() {
+
+                });
 
                 $('.introduction h2').textillate({ in: { effect: 'rotateIn', sync: true }});
 
