@@ -20,9 +20,10 @@
                 /* $('#about-item .row .animated').removeClass().addClass('slideInLeft' + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                   $(this).removeClass();
               }); */
-              $('#about-item .animate-element').removeClass("animated bounceInLeft").addClass('animated bounceInLeft');
+              $('[data-textillate-about]').textillate({ in: { effect: 'bounceInLeft', sync: true }});
+              $('[data-textillate-skills]').textillate({ in: { effect: 'rotateIn', sync: true }});
             }, 650);
-            $('[data-textillate-about]').textillate({ in: { effect: 'rotateIn', sync: true }});
+            
             $this.ani1 = true;
         },
         runAnimationsIfVisible : function() {
