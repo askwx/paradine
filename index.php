@@ -378,7 +378,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="padtop-60 padbottom-24" id="work-item">
+                    <div class="padtop-60 padbottom-24" id="contact-item">
                         <div class="text-center">
                             <div class="base-line center-line marbottom-32">
                                 <h2 class="ins-h1" data-textillate-contact>Request Proposal</h2>
@@ -437,7 +437,7 @@
                 <div class="padtop-60 padbottom-24" id="services-item">
                     <div class="text-center">
                         <div class="base-line center-line marbottom-32">
-                            <h2 class="ins-h1" data-textillate-contact>Services</h2>
+                            <h2 class="ins-h1" data-textillate-services>Services</h2>
                         </div>
 
                     </div>
@@ -445,45 +445,45 @@
             </div>
         </div>
         <div class="row text-center iconset-34 marset-16 padbottom-60">
-            <div class="col-sm-4 marbottom-32">
+            <div class="col-sm-4">
                 <div><i class="fa fa-graduation-cap text-primary"></i></div>
                 <h3>Educational Games</h3>
-                <p>
-                    From flash cards to trivia applications, there are many ways to build a game to help people learn.
+                <p class="marbottom-32">
+                    Learning can be much easier and fun when creating an interactive game.
                 </p>
             </div>
-            <div class="col-sm-4 marbottom-32">
+            <div class="col-sm-4">
                 <div><i class="fa fa-wrench text-primary"></i></div>
                 <h3>Application Development</h3>
-                <p>
+                <p class="marbottom-32">
                     Work order tracking, point of sale, check-in software, educational applications.
                 </p>
             </div>
-            <div class="col-sm-4 marbottom-32">
+            <div class="col-sm-4">
                 <div><i class="fa fa-globe text-primary"></i></div>
                 <h3>Website Development</h3>
-                <p>
+                <p class="marbottom-32">
                     All websites are completely responsive and tested to work in all major devices.
                 </p>
             </div>
             <div class="col-sm-4">
                 <div><i class="fa fa-spinner text-primary"></i></div>
                 <h3>Interactive Brochures</h3>
-                <p>
+                <p class="marbottom-32">
                     I create well organized interactive brochures of your business to showcase your product.
                 </p>
             </div>
             <div class="col-sm-4">
                 <div><i class="fa fa-wordpress text-primary"></i></div>
                 <h3>Wordpress Development</h3>
-                <p>
+                <p class="marbottom-32">
                     Do you have a website that needs to be managed by Wordpress or do you need a theme developed?
                 </p>
             </div>
             <div class="col-sm-4">
                 <div><i class="fa fa-object-group text-primary"></i></div>
                 <h3>User Interface Design</h3>
-                <p>
+                <p class="marbottom-32">
                     If you have an idea, we can take it through the design process and build out a prototype.
                 </p>
             </div>
