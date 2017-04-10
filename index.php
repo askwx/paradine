@@ -8,11 +8,11 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,700%7COpen+Sans:300italic,400italic,400,300%7CRoboto:400,300,500,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,700%7COpen+Sans:300italic,400italic,400,300%7CRoboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
     <link href="assets/css/animate.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/paradine.css?v=4">
+    <link rel="stylesheet" href="assets/css/paradine.css?v=5">
 
   </head>
   <body>
