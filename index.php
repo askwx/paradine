@@ -1,3 +1,7 @@
+<?php
+    require "assets/lib/Mobile_Detect.php";
+    $detect = new Mobile_Detect;
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,6 +17,12 @@
     <link href="assets/css/animate.css" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/paradine.css?v=5">
+
+    <?php
+        echo !$detect->isMobile() ? '<link rel="stylesheet" href="assets/css/flip.css?v=1">' : '';
+        $hiddenMobile = $detect->isMobile() ? ' hidden' : '';
+        $visibleMobile = $detect->isMobile() ? '' : ' hidden';
+    ?>
 
   </head>
   <body>
@@ -226,16 +236,17 @@
         <div class="row marbottom-32">
             <div class="col-md-4">
                 <div class="portfolio-item">
-                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <a href="http://www.arqsoftware.com" class="<?=$visibleMobile?>"><img src="assets/images/portfolio8.jpg"></a>
+                    <div class="flip-container<?=$hiddenMobile?>" ontouchstart="this.classList.toggle('hover');">
                     	<div class="flipper">
                     		<div class="front">
                     			<!-- front content -->
-                                <img src="assets/images/portfolio1.jpg">
+                                <img src="assets/images/portfolio8.jpg">
                     		</div>
                     		<div class="back text-thin text-uppercase size-20">
                                 <div>
                         			<!-- back content -->
-                                    Canyon - Multi-Purpose <br>Bootstrap Theme<br><a href="http://canyon.cadoyen.com" target="_blank" class="size-smaller text-primary">canyon.cadoyen.com</a>
+                                    ARQ Software<br><a href="http://www.arqsoftware.com" target="_blank" class="size-smaller text-primary">ARQSOFTWARE.COM</a>
                                 </div>
                     		</div>
                     	</div>
@@ -244,7 +255,28 @@
             </div>
             <div class="col-md-4">
                 <div class="portfolio-item">
-                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <a href="http://canyon.arqsoftware.com" class="<?=$visibleMobile?>"><img src="assets/images/portfolio1.jpg"></a>
+                    <div class="flip-container<?=$hiddenMobile?>" ontouchstart="this.classList.toggle('hover');">
+                        <div class="flipper">
+                    		<div class="front">
+                    			<!-- front content -->
+                                <img src="assets/images/portfolio1.jpg">
+                    		</div>
+                    		<div class="back text-thin text-uppercase size-20">
+                                <div>
+                        			<!-- back content -->
+                                    Canyon - Multi-Purpose <br>Bootstrap Theme<br>
+                                    <a href="http://canyon.arqsoftware.com" target="_blank" class="size-smaller text-primary">canyon.arqsoftware.com</a>
+                                </div>
+                    		</div>
+                    	</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="portfolio-item">
+                    <a href="http://www.grpa.org" class="<?=$visibleMobile?>"><img src="assets/images/portfolio2.jpg"></a>
+                    <div class="flip-container<?=$hiddenMobile?>" ontouchstart="this.classList.toggle('hover');">
                     	<div class="flipper">
                     		<div class="front">
                     			<!-- front content -->
@@ -260,29 +292,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="portfolio-item">
-                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                    	<div class="flipper">
-                    		<div class="front">
-                    			<!-- front content -->
-                                <img src="assets/images/portfolio3.jpg">
-                    		</div>
-                    		<div class="back text-thin text-uppercase size-20">
-                                <div>
-                        			<!-- back content -->
-                                    Atlanta Federation of <br>Musicians<br><a href="http://atlantamusicians.com/" target="_blank" class="size-smaller text-primary">atlantamusicians.com</a>
-                                </div>
-                    		</div>
-                    	</div>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="row marbottom-32">
             <div class="col-md-4">
                 <div class="portfolio-item">
-                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <a href="http://www.crpa.net/" class="<?=$visibleMobile?>"><img src="assets/images/portfolio4.jpg"></a>
+                    <div class="flip-container<?=$hiddenMobile?>" ontouchstart="this.classList.toggle('hover');">
                     	<div class="flipper">
                     		<div class="front">
                     			<!-- front content -->
@@ -300,7 +315,8 @@
             </div>
             <div class="col-md-4">
                 <div class="portfolio-item">
-                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <a href="#" class="<?=$visibleMobile?>"><img src="assets/images/portfolio6.jpg"></a>
+                    <div class="flip-container<?=$hiddenMobile?>" ontouchstart="this.classList.toggle('hover');">
                     	<div class="flipper">
                     		<div class="front">
                     			<!-- front content -->
@@ -318,7 +334,8 @@
             </div>
             <div class="col-md-4">
                 <div class="portfolio-item">
-                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <a href="http://selecttechsecurity.arqsoftware.com" class="<?=$visibleMobile?>"><img src="assets/images/portfolio9.jpg"></a>
+                    <div class="flip-container<?=$hiddenMobile?>" ontouchstart="this.classList.toggle('hover');">
                     	<div class="flipper">
                     		<div class="front">
                     			<!-- front content -->
@@ -327,7 +344,7 @@
                     		<div class="back text-thin text-uppercase size-20">
                                 <div>
                         			<!-- back content -->
-                                    Select Tech Security<br><a href="http://selecttechsecurity.cadoyen.com" target="_blank" class="size-smaller text-primary">Select Tech Security</a>
+                                    Select Tech Security<br><a href="http://selecttechsecurity.arqsoftware.com" target="_blank" class="size-smaller text-primary">Select Tech Security</a>
                                 </div>
                     		</div>
                     	</div>
@@ -338,7 +355,8 @@
         <div class="row padbottom-60">
             <div class="col-md-4">
                 <div class="portfolio-item">
-                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <a href="#" class="<?=$visibleMobile?>"><img src="assets/images/portfolio7.jpg"></a>
+                    <div class="flip-container<?=$hiddenMobile?>" ontouchstart="this.classList.toggle('hover');">
                     	<div class="flipper">
                     		<div class="front">
                     			<!-- front content -->
@@ -356,16 +374,17 @@
             </div>
             <div class="col-md-4">
                 <div class="portfolio-item">
-                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <a href="http://atlantamusicians.com/" class="<?=$visibleMobile?>"><img src="assets/images/portfolio3.jpg"></a>
+                    <div class="flip-container<?=$hiddenMobile?>" ontouchstart="this.classList.toggle('hover');">
                     	<div class="flipper">
                     		<div class="front">
                     			<!-- front content -->
-                                <img src="assets/images/portfolio8.jpg">
+                                <img src="assets/images/portfolio3.jpg">
                     		</div>
                     		<div class="back text-thin text-uppercase size-20">
                                 <div>
                         			<!-- back content -->
-                                    ARQ Software<br><a href="http://www.arqsoftware.com" target="_blank" class="size-smaller text-primary">ARQSOFTWARE.COM</a>
+                                    Atlanta Federation of <br>Musicians<br><a href="http://atlantamusicians.com/" target="_blank" class="size-smaller text-primary">atlantamusicians.com</a>
                                 </div>
                     		</div>
                     	</div>
