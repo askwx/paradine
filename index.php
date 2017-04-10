@@ -365,7 +365,7 @@
                     		<div class="back text-thin text-uppercase size-20">
                                 <div>
                         			<!-- back content -->
-                                    Hebrew Lessons Learning Application<br><a href="#" target="_blank" class="size-smaller text-primary">The Hebrew Challenge</a>
+                                    ARQ Software<br><a href="http://www.arqsoftware.com" target="_blank" class="size-smaller text-primary">ARQSOFTWARE.COM</a>
                                 </div>
                     		</div>
                     	</div>
